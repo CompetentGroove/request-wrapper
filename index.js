@@ -3,21 +3,34 @@ const axios=require('axios');
 async function get(url,callback) {
     try {
       const response = await axios.get(url);
-      callback(response);
+      callback(error,response,body);
       console.log(response.data);
     } catch (error) {
       console.error(error);
     }
   }
 
+  // get('https://reqres.in/api/users?page=2', function (error, response, body) {
+  //   console.log('statusCode:', response); 
+  //   console.log('body:', body); 
+  // });
+
+  
+
  async function post(url,callback) {
     try {
-    let res = await axios.post(url, callback);
-    console.log( res.data);     
+    let response = await axios.post(url);
+    callback(response);
+     
     } catch (error) {
         console.log(error)
     }
 }
+
+// post('https://reqres.in/api/users?page=2', function (error, response, body) {
+//     console.log('statusCode:', response); 
+//     console.log('body:', body); 
+//   });
 
 
 async function Delete(url) {
@@ -44,6 +57,8 @@ async function put(url,callback){
         console.log(error);  
     }
 }
+
+put('https://reqres.in/api/users?page=2',{name:'nitin'})
 
 
 
