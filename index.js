@@ -19,16 +19,19 @@ async function get(url,callback) {
     }
 }
 
-async function Delete(url,callback) {
+
+async function Delete(url) {
     try{
     let res = await axios.delete(url);
-    callback(res);
+    
     console.log( res.data);
         
     } catch (error) {
         console.log(error)
     }
 }
+
+
 
 async function put(url,callback){
     try {
@@ -42,16 +45,19 @@ async function put(url,callback){
     }
 }
 
+
+
 async function patch(url,callback){
   try {
   const res= await axios.patch(url,callback)
-  .then((res)=>{
-    console.log(res);
-  })
+  console.log(res.data)
+  console.log(callback)
   } catch (error) {
     console.log(error)
   }
 }
+
+
 
 module.exports={get,post,put,Delete,patch};
 
