@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.25.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitinrajput129/requestPackage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nitinrajput129/requestPackage/issues"
+  },
+  "homepage": "https://github.com/nitinrajput129/requestPackage#readme"
 }
