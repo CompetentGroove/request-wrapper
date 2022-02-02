@@ -21,15 +21,20 @@ async function get(url,callback) {
 
 
 
-async function Delete(url) {
+async function Delete(url,callback) {
     try{
-    let res = await axios.delete(url);
+    let response = await axios.delete(url);
     callback(response.status,response.data);
         
     } catch (error) {
         console.log(error)
     }
 }
+
+Delete('https://reqres.in/api/users?page=2', function (error, response, body) {
+    console.log('statusCode:', response); 
+    console.log('body:', body); 
+  });
 
 
 async function put(url,callback){
