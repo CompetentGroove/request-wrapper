@@ -31,11 +31,6 @@ async function Delete(url,callback) {
     }
 }
 
-Delete('https://reqres.in/api/users?page=2', function (error, response, body) {
-    console.log('statusCode:', response); 
-    console.log('body:', body); 
-  });
-
 
 async function put(url,callback){
     try {
