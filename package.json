@@ -1,6 +1,6 @@
 {
   "name": "@nitinrajput/request",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "fetch data",
   "main": "index.js",
   "scripts": {
