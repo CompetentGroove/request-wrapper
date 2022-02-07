@@ -1,5 +1,5 @@
 {
-  "name": "request-wrapper",
+  "name": "@nitinrajput/request-wrapper",
   "version": "1.0.18",
   "description": "fetch data",
   "main": "index.js",
