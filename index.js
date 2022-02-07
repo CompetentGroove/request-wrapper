@@ -14,7 +14,7 @@ async function get(url, callback) {
   }
 }
 
-async function post(url, callback, data) {
+async function post(url, data, callback) {
   let res, err, status;
   try {
     const response = await axios.post(url, data);
@@ -29,7 +29,9 @@ async function post(url, callback, data) {
   }
 }
 
-async function put(url, callback, data) {
+
+
+async function put(url, data,callback) {
   let res, err, status;
   try {
     const response = await axios.put(url, data);
@@ -44,7 +46,7 @@ async function put(url, callback, data) {
   }
 }
 
-async function patch(url, callback, data) {
+async function patch(url, data,callback) {
   let res, err, status;
   try {
     const response = await axios.patch(url, data);
