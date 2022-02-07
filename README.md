@@ -1,4 +1,4 @@
-# Request - Simplified HTTP client
+# Request-wrapper
 
 ## Super simple to use
 
@@ -147,7 +147,7 @@ For convenience aliases have been provided for all supported request methods.
 
 ##### request.get(url, callback)
 
-##### axios.post(url,data,callback)
+##### request.post(url,data,callback)
 
 ##### request.put(url ,data, callback)
 
