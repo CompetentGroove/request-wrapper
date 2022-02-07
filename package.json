@@ -1,6 +1,6 @@
 {
-  "name": "@nitinrajput/request",
-  "version": "1.0.17",
+  "name": "request-wrapper",
+  "version": "1.0.18",
   "description": "fetch data",
   "main": "index.js",
   "scripts": {
