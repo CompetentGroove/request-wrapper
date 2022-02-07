@@ -5,7 +5,7 @@
 Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default..
 
 ```js
-const request = require("@nitinrajput/request-wrapper");
+const request = require("@competentgroove/request-wrapper");
 request("http://www.google.com", function (error, response, body) {
   console.error("error:", error); // Print the error if one occurred
   console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
@@ -21,7 +21,7 @@ Promise based HTTP client for the browser and node.js
 
 Using npm:
 
-    npm i @nitinrajput/request-wrapper
+    npm i @competentgroove/request-wrapper
 
 ## Table of contents
 
@@ -113,7 +113,7 @@ So, an error inside the `try {...}` block does not kill the script – we have a
 
 In order to gain the TypeScript typings (for intellisense / autocomplete) while using CommonJS imports with `require()` use the following approach:
 
-    const  request = require("@nitinrajput/request-wrapper");
+    const  request = require("@competentgroove/request-wrapper");
 
 #### application/x-www-form-urlencoded (URL-Encoded Forms)
 
