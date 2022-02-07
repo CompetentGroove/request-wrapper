@@ -113,7 +113,7 @@ So, an error inside the `try {...}` block does not kill the script – we have a
 
 In order to gain the TypeScript typings (for intellisense / autocomplete) while using CommonJS imports with `require()` use the following approach:
 
-    const  request = require("@nitinrajput/request");
+    const  request = require("@nitinrajput/request-wrapper");
 
 #### application/x-www-form-urlencoded (URL-Encoded Forms)
 
