@@ -14,7 +14,7 @@ async function get(url, callback) {
   }
 }
 
- module.exports=async function(options, callback) {
+ async function request(options, callback) {
   let res, err, status;
   try {
     const response = await axios(options);
@@ -28,11 +28,6 @@ async function get(url, callback) {
     callback(err, status, res);
   }
 }
-
-
-
-
-
 
 
 async function post(url, data, callback) {
@@ -96,4 +91,4 @@ async function Delete(url, callback) {
   }
 }
 
-module.exports = { get, post, put, Delete, patch };
+module.exports = { get, post, put, Delete, patch , request };
