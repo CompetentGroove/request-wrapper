@@ -94,4 +94,4 @@ async function Delete(url, callback) {
   }
 }
 
-module.exports = { get, post, put, Delete, patch };
+module.exports = { get, post, put, Delete, patch,request };
