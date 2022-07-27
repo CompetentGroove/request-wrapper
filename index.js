@@ -4,13 +4,13 @@ const axios = require("axios");
 function Request(options, callback) {
     switch (options.method) {
         case 'get':
-            return get(options.url, callback);
+            return get(options.url, options, callback);
             break;
         case 'post':
             return post(options.url, options, callback)
             break;
         case 'patch':
-            return patch(options.url, options.data, callback)
+            return patch(options.url, options, callback)
             break;
         case 'delete1':
             return delete1(options.url, callback)
@@ -19,15 +19,15 @@ function Request(options, callback) {
             return put(options.url, options, callback)
             break;
         default:
-            get(options.url, callback);
+            get(options.url, options, callback);
 
     }
 }
 
-const get = async function (url, callback) {
+const get = async function (url, data, callback) {
     let res, err, status;
     try {
-        const response = await axios.get(url);
+        const response = await axios.get(url, { headers: data.headers });
         res = response.data;
         status = response.status;
     } catch (error) {
@@ -35,7 +35,7 @@ const get = async function (url, callback) {
         res = err.response.data;
         status = err.status;
     } finally {
-        callback(err, status, res);
+        callback(res ? null : err, status, res);
     }
 }
 
@@ -73,7 +73,7 @@ const put = async function (url, data, callback) {
 const patch = async function (url, data, callback) {
     let res, err, status;
     try {
-        const response = await axios.patch(url, data);
+        const response = await axios.patch(url, data.body, { headers: data.headers });
         res = response.data;
         status = response.status;
     } catch (error) {
@@ -81,7 +81,7 @@ const patch = async function (url, data, callback) {
         res = err.response.data;
         status = err.status;
     } finally {
-        callback(err, status, res);
+        callback(res ? null : err, status, res);
     }
 }
 
