@@ -12,7 +12,7 @@ function Request(options, callback) {
         case 'patch':
             return patch(options.url, options, callback)
             break;
-        case 'delete1':
+        case 'delete':
             return delete1(options.url, callback)
             break;
         case 'put':
