@@ -58,7 +58,7 @@ const get = async function (url, data, callback) {
         status = response.status;
     } catch (error) {
         err = error;
-        res = err.response.data;
+        res = err.response && err.response.data;
         status = err.status;
     } finally {
         callback(res ? null : err, status, res);
@@ -73,7 +73,7 @@ const post = async function (url, data, callback) {
         status = response.status;
     } catch (error) {
         err = error;
-        res = err.response.data;
+        res = err.response && err.response.data;
         status = err.status;
     } finally {
         callback(res ? null : err, status, res);
@@ -89,7 +89,7 @@ const put = async function (url, data, callback) {
         status = response.status;
     } catch (error) {
         err = error;
-        res = err.response.data;
+        res = err.response && err.response.data;
         status = err.status;
     } finally {
         callback(res ? null : err, status, res);
@@ -104,7 +104,7 @@ const patch = async function (url, data, callback) {
         status = response.status;
     } catch (error) {
         err = error;
-        res = err.response.data;
+        res = err.response && err.response.data;
         status = err.status;
     } finally {
         callback(res ? null : err, status, res);
@@ -119,7 +119,7 @@ const delete1 = async function (url, callback) {
         status = response.status;
     } catch (error) {
         err = error;
-        res = err.response.data;
+        res = err.response && err.response.data;
         status = err.status;
     } finally {
         callback(err, status, res);
