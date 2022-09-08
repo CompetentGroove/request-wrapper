@@ -1,6 +1,6 @@
 {
   "name": "@competentgroove/request-wrapper",
-  "version": "1.1.7",
+  "version": "1.1.9",
   "description": "fetch data",
   "main": "index.js",
   "scripts": {
