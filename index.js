@@ -38,6 +38,8 @@ async function getResponse(data) {
             formData.append(key, value)
         }
 
+        data.headers["Content-Type"]+=`; boundary=${formData._boundary}`
+
         requestData = formData
     }
 
